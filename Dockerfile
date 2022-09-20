@@ -1,7 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:3.16.2
 
-RUN apt-get update -y
-RUN apt-get install -y python3-pip
+RUN apk add py3-pip
 
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt /app/requirements.txt
