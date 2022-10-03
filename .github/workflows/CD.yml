@@ -21,7 +21,7 @@ on:
 
 jobs:
   test:
-    if: ${{ github.event.inputs.tag }} == true
+    if: ${{ github.event.inputs.run-test }} == true
     runs-on: ubuntu-latest
     strategy:
       matrix:
